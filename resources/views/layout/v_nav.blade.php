@@ -3,7 +3,7 @@
       <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
       <li class="nav-item">
-        <a href="/" class="nav-link">
+        <a href="/" class="nav-link {{request()->is('/') ? 'active' : ''}}">
           <i class="nav-icon fas fa-tachometer-alt"></i>
           <p>
             Dashboard
@@ -12,7 +12,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="/siswa" class="nav-link">
+        <a href="/siswa" class="nav-link {{request()->is('siswa') ? 'active' : ''}}">
           <i class="nav-icon fas fa-book"></i>
           <p>
             Siswa
@@ -21,7 +21,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="/guru" class="nav-link">
+        <a href="/guru" class="nav-link {{request()->is('guru') ? 'active' : ''}}">
           <i class="nav-icon fas fa-book"></i>
           <p>
             Guru
@@ -30,10 +30,19 @@
       </li>
 
       <li class="nav-item">
-        <a href="/user" class="nav-link">
+        <a href="/user" class="nav-link {{request()->is('user') ? 'active' : ''}}">
           <i class="nav-icon fas fa-book"></i>
           <p>
             User
+          </p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/about" class="nav-link {{request()->is('about') ? 'active' : ''}}">
+          <i class="nav-icon fas fa-book"></i>
+          <p>
+            About
           </p>
         </a>
       </li>
